@@ -11,8 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CupId">
-        <activity android:name=".Activities.Profile_Settings" />
-        <activity android:name=".Activities.Profile_Preferences" />
+        <activity
+            android:name=".Activities.SignupSuccessfullActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.Profile_Settings"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".Activities.Profile_Preferences"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".Activities.HomeScreen"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
