@@ -14,7 +14,9 @@ import android.widget.LinearLayout;
 
 import com.example.cupid.Activities.Profile_Preferences;
 import com.example.cupid.Activities.Profile_Settings;
+import com.example.cupid.Adapter.ViewPagerAdaper;
 import com.example.cupid.R;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -25,6 +27,10 @@ import java.util.TimerTask;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+
+    ViewPager viewPager;
+    ViewPagerAdaper viewPagerAdapter;
+
 
     LinearLayout preferences;
     LinearLayout settings;
@@ -73,9 +79,22 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_profile, container, false);
+        TabLayout tabLayout;
 
         preferences=v.findViewById(R.id.preferences);
         settings= v.findViewById(R.id.settings);
+
+       viewPagerAdapter = new ViewPagerAdaper(this,getFragmentManager());
+
+        viewPager = v.findViewById(R.id.viewPager);
+        viewPager.setAdapter(viewPagerAdapter);
+
+        tabLayout = (TabLayout) v.findViewById(R.id.tabing);
+        tabLayout.setupWithViewPager(viewPager, true);
+
+
+
+
 
         preferences.setOnClickListener(new View.OnClickListener() {
             @Override
