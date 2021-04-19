@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -23,8 +25,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SignupSuccessfullActivity extends AppCompatActivity {
 
-    Button next;
-    LinearLayout letsgetstarted;
+    Button next,submit;
+    LinearLayout letsgetstarted,thanks;
 
     LinearLayout Q1main,Q2main,Q3main,Q4main,Q5main,Q6main,Q7main,Q8main,Q9main,Q10main,Q11main,Q12main,Q13main,Q14main,Q15main;
 
@@ -215,7 +217,18 @@ public class SignupSuccessfullActivity extends AppCompatActivity {
         otherspinner15 = (ListView) findViewById(R.id.otherspinner15);
 
         next = findViewById(R.id.next);
+        submit=findViewById(R.id.submit);
         letsgetstarted = findViewById(R.id.letsgetstarted);
+        thanks=findViewById(R.id.thanks);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(SignupSuccessfullActivity.this,HomeScreen.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1852,6 +1865,7 @@ public class SignupSuccessfullActivity extends AppCompatActivity {
                     public void run() {
 
                         Q15main.setVisibility(View.GONE);
+                        thanks.setVisibility(View.VISIBLE);
 
                     }
                 },1000);
