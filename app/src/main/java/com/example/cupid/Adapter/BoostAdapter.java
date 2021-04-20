@@ -52,9 +52,9 @@ public class BoostAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         if (position == 0) {
 
-            return "";
+            return null;
         } else  {
-            return "";
+            return  null;
         }
 
 

@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,6 +27,8 @@ public class MessagesFragment extends Fragment {
     LinearLayout all;
     LinearLayout yourturn;
     LinearLayout newmatches;
+
+    LinearLayout btn_pannel;
 
     TextView alls,turn,matches;
 
@@ -81,6 +84,8 @@ public class MessagesFragment extends Fragment {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_messages, container, false);
 
+
+
         all=v.findViewById(R.id.all);
         yourturn=v.findViewById(R.id.your_turn);
         newmatches=v.findViewById(R.id.new_matchs);
@@ -94,21 +99,27 @@ public class MessagesFragment extends Fragment {
         messages_yourTurn = new messages_yourTurn();
         messages_newMatches = new messages_NewMatches();
 
+        btn_pannel = v.findViewById(R.id.btn_pannel);
+        btn_pannel.setBackgroundResource(R.drawable.roundings);
+
 
     //Layout set listner
         all.setBackgroundColor(Color.parseColor("#0504AA"));
         alls.setTextColor(Color.parseColor("#FFFFFF"));
 
         setfragment(messages_all);
+        all.setBackgroundResource(R.drawable.rounds);
         all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                all.setBackgroundColor(Color.parseColor("#0504AA"));
+                all.setBackgroundResource(R.drawable.rounds);
                 alls.setTextColor(Color.parseColor("#FFFFFF"));
+
                 yourturn.setBackgroundColor(Color.parseColor("#FFFFFF"));
                 turn.setTextColor(Color.parseColor("#000000"));
-                newmatches.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+                newmatches.setBackgroundResource(R.drawable.roundings);
                 matches.setTextColor(Color.parseColor("#000000"));
 
                 setfragment(messages_all);
@@ -121,11 +132,13 @@ public class MessagesFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                all.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                all.setBackgroundResource(R.drawable.roundings);
                 alls.setTextColor(Color.parseColor("#000000"));
-                yourturn.setBackgroundColor(Color.parseColor("#0504AA"));
+
+                yourturn.setBackgroundResource(R.drawable.rounds);
                 turn.setTextColor(Color.parseColor("#FFFFFF"));
-                newmatches.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+                newmatches.setBackgroundResource(R.drawable.roundings);
                 matches.setTextColor(Color.parseColor("#000000"));
 
                 setfragment(messages_yourTurn);
@@ -134,11 +147,13 @@ public class MessagesFragment extends Fragment {
         newmatches.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                all.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                all.setBackgroundResource(R.drawable.roundings);
                 alls.setTextColor(Color.parseColor("#000000"));
-                yourturn.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+                yourturn.setBackgroundResource(R.drawable.roundings);
                 turn.setTextColor(Color.parseColor("#000000"));
-                newmatches.setBackgroundColor(Color.parseColor("#0504AA"));
+
+                newmatches.setBackgroundResource(R.drawable.rounds);
                 matches.setTextColor(Color.parseColor("#FFFFFF"));
 
                 setfragment(messages_newMatches);
