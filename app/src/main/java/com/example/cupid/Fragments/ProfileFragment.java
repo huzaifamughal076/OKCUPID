@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.example.cupid.Activities.EditProfile;
 import com.example.cupid.Activities.Profile_Preferences;
 import com.example.cupid.Activities.Profile_Settings;
 import com.example.cupid.Adapter.ViewPagerAdaper;
@@ -27,6 +28,8 @@ import java.util.TimerTask;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+
+    ImageView editprofile;
 
     ViewPager viewPager;
     ViewPagerAdaper viewPagerAdapter;
@@ -84,7 +87,7 @@ public class ProfileFragment extends Fragment {
         preferences=v.findViewById(R.id.preferences);
         settings= v.findViewById(R.id.settings);
 
-       viewPagerAdapter = new ViewPagerAdaper(this,getFragmentManager());
+       viewPagerAdapter = new ViewPagerAdaper(this,getChildFragmentManager());
 
         viewPager = v.findViewById(R.id.viewPager);
         viewPager.setAdapter(viewPagerAdapter);
@@ -111,6 +114,20 @@ public class ProfileFragment extends Fragment {
 
                 Intent i=new Intent(getActivity(), Profile_Settings.class);
                 startActivity(i);
+            }
+        });
+
+
+
+        editprofile = v.findViewById(R.id.edit_profile);
+
+        editprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(getActivity(), EditProfile.class);
+                startActivity(i);
+
             }
         });
 

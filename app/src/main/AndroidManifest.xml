@@ -12,8 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CupId">
         <activity
+            android:name=".Activities.FullProfileActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        </activity>
+
+        <activity
+            android:name=".Activities.EditProfile"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
             android:name=".Activities.SignupSuccessfullActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".Activities.Profile_Settings"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
