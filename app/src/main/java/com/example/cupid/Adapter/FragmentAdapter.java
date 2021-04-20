@@ -24,7 +24,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
             case 1: return new Second_Fragment();
             case 2: return new Third_Fragment();
 
-            default: return null;
+            default: return new first_fragment();
         }
 
     }

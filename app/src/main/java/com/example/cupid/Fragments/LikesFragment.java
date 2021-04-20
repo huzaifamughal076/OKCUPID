@@ -70,7 +70,7 @@ public class LikesFragment extends Fragment {
         View v=inflater.inflate(R.layout.fragment_likes, container, false);
 
         viewPager = v.findViewById(R.id.viewpapers);
-        viewPager.setAdapter(new FragmentAdapter(getFragmentManager()));
+        viewPager.setAdapter(new FragmentAdapter(getChildFragmentManager()));
 
         tabLayout = v.findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);

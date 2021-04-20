@@ -79,7 +79,7 @@ public class Second_Fragment extends Fragment {
         viewPager = v.findViewById(R.id.viewPagers);
         viewPager.setAdapter(boostAdapter);
 
-        tabLayout = (TabLayout) v.findViewById(R.id.tabings);
+        tabLayout = (TabLayout) v.findViewById(R.id.tabing);
         tabLayout.setupWithViewPager(viewPager, true);
 
 
