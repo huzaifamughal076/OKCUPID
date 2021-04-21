@@ -10,16 +10,26 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CupId">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".Activities.EmptyRequiredData"></activity>
+        <activity
+            android:name=".Activities.PreferencesDistance"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.PreferencesAge"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".Activities.BodyType"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Activities.Preferences_Gender"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activities.FullProfileActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-
-        </activity>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activities.EditProfile"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".Activities.SignupSuccessfullActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />

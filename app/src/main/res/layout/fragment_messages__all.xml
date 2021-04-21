@@ -22,7 +22,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/sampleimage" />
+                android:src="@drawable/girl1" />
 
 
         </LinearLayout>
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Username"
+                    android:text="Ava"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     />
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
-                    android:text="Username"
+                    android:text="Hi! how about some tea."
                     android:textSize="14sp"
                     />
 
